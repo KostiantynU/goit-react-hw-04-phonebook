@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { BookForm, NameInput, AddBtn, Paragraph, Div, TelInput } from './PhoneBookFormStyled';
 import { nanoid } from 'nanoid';
@@ -13,7 +13,6 @@ export function PhoneBookForm({ changeContacts }) {
       id: nanoid(),
       numberContact,
     };
-    console.log(newContact);
     changeContacts(newContact);
     reset();
   };
