@@ -4,7 +4,6 @@ import { DivContacts, ListContacts } from './PhoneBookListStyled';
 import { BookItem } from 'components/PhoneBookListItem';
 
 export function PhoneBookList({ array, deleteItem }) {
-  console.log(array);
   return (
     <DivContacts>
       <ListContacts>
