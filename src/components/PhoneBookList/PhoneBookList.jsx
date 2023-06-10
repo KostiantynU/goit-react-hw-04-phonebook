@@ -22,6 +22,7 @@ export function PhoneBookList({ array, deleteItem }) {
     </DivContacts>
   );
 }
+
 PhoneBookList.propTypes = {
   array: PropTypes.arrayOf(
     PropTypes.shape({

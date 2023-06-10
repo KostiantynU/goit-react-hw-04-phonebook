@@ -2,6 +2,7 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { BookForm, NameInput, AddBtn, Paragraph, Div, TelInput } from './PhoneBookFormStyled';
 import { nanoid } from 'nanoid';
+
 export function PhoneBookForm({ changeContacts }) {
   const [nameContact, setNameContact] = useState('');
   const [numberContact, setNumberContact] = useState('');
@@ -58,6 +59,7 @@ export function PhoneBookForm({ changeContacts }) {
     </BookForm>
   );
 }
+
 PhoneBookForm.propTypes = {
   changeContacts: PropTypes.func.isRequired,
 };

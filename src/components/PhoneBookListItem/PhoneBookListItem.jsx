@@ -13,6 +13,7 @@ export function BookItem({ nameContact, numberContact, btnId, deleteItem }) {
     </PhoneBookListItem>
   );
 }
+
 BookItem.propTypes = {
   nameContact: PropTypes.string.isRequired,
   numberContact: PropTypes.string.isRequired,
