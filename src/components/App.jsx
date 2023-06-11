@@ -35,7 +35,7 @@ export function App() {
     ) {
       return alert(`${newContact.nameContact} is already in list!`);
     }
-    setStateArray([...stateArray, newContact]);
+    setStateArray(prevArray => [...prevArray, newContact]);
   };
 
   const handleChangeSearch = ({ target }) => {
@@ -47,7 +47,7 @@ export function App() {
   };
 
   const deleteItem = btnId => {
-    setStateArray([...stateArray].filter(el => el.id !== btnId));
+    setStateArray(prevArray => [...prevArray].filter(el => el.id !== btnId));
   };
 
   return (
