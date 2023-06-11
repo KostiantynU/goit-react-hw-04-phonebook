@@ -19,7 +19,7 @@ const INITIAL_STATE = {
 
 export function App() {
   const [stateArray, setStateArray] = useState(
-    loadFromLocal(INITIAL_STATE.keyLocalStorage) ?? [...INITIAL_STATE.contacts]
+    () => loadFromLocal(INITIAL_STATE.keyLocalStorage) ?? [...INITIAL_STATE.contacts]
   );
   const [filter, setFilter] = useState('');
 
