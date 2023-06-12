@@ -1,1 +1,1 @@
-export { PhoneBookForm } from './PhoneBookForm';
+export { PhoneBookForm } from './PhoneBookFormik';

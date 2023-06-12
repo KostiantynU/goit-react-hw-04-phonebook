@@ -44,3 +44,9 @@ export const DeleteBtn = styled(AddBtn)`
   margin: 0;
   padding: 0.3em;
 `;
+export const ErrorDiv = styled.div`
+  margin: 0.2em;
+  font-size: 12px;
+  font-weight: 600;
+  color: red;
+`;
