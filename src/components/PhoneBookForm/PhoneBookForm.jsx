@@ -7,7 +7,7 @@ import { useFormik } from 'formik';
 export function PhoneBookForm({ changeContacts }) {
   const validate = values => {
     const errors = {};
-    if (!nameContact) {
+    if (!values.nameContact) {
       errors.nameContact = 'Required';
     } else if (
       !/^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/i.test(values.nameContact)
@@ -15,7 +15,7 @@ export function PhoneBookForm({ changeContacts }) {
       errors.nameContact = 'Invalid name';
     }
 
-    if (!numberContact) {
+    if (!values.numberContact) {
       errors.numberContact = 'Required';
     } else if (
       !/\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/i.test(
@@ -24,6 +24,8 @@ export function PhoneBookForm({ changeContacts }) {
     ) {
       errors.numberContact = 'Invalid number';
     }
+
+    return errors;
   };
 
   const formik = useFormik({
