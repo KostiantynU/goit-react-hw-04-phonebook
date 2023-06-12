@@ -19,6 +19,10 @@ export const NameInput = styled.input`
     -moz-box-shadow: 0px 0px 8px 3px rgba(147, 114, 163, 0.75);
   }
 `;
+export const Label = styled.label`
+  display: block;
+  margin: 0.5em;
+`;
 export const Paragraph = styled.p`
   margin: 0.5em;
 `;
